@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Simulate login check
     if ($username === 'testuser' && $password === 'password') {
-        header('Location: homepage.php');
+        header('Location: homepage.html');
         exit;
     } else {
         $error = "Invalid username or password!";
