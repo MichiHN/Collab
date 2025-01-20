@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Art Gallery - Homepage</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="homepage.css"> <!-- Link to the separate CSS -->
 </head>
 <body>
     <div class="background-blur"></div>
+
+    <!-- Back Button -->
+    <a href="index.php" style="position: absolute; top: 10px; left: 10px; z-index: 10; text-decoration: none;">
+        <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Logout</button>
+    </a>
     <div class="container homepage-container">
         <h1>Welcome to the Virtual Art Gallery</h1>
 
         <!-- Art Submission Section -->
         <section class="upload-art">
             <h2>Would you like to share your art?</h2>
-            <form action="gallery.php" method="POST" enctype="multipart/form-data">
+            <form id="art-upload-form" enctype="multipart/form-data">
                 <input type="file" name="artwork" accept="image/*" required>
-                <button type="submit">Submit Your Art</button>
+                <button type="submit" id="submit-art-btn">Submit Your Art</button>
             </form>
         </section>
 
@@ -40,6 +45,7 @@
 
         <!-- Button to Enter the Gallery -->
         <a href="game.html"><button class="enter-gallery">Enter the Gallery</button></a>
+        <script src="app.js"></script>
     </div>
 </body>
 </html>
